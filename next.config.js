@@ -1,6 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withStyles = require('next-images');
 
-module.exports = nextConfig
+module.exports = withStyles({
+  esModule: true,  
+  images: {
+    disableStaticImages: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+});
